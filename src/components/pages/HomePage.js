@@ -4,10 +4,10 @@ import HomeContainer from './HomePageComponents/HomeContainer';
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Breadcrumb title="Home" />
       <HomeContainer />
-    </div>
+    </>
   );
 };
 

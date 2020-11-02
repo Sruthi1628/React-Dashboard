@@ -11,12 +11,15 @@ const HomeContainer = () => {
     const response = await axios.get(
       'https://jsonplaceholder.typicode.com/users/'
     );
+    
     setUsers(response.data);
     setLoading(false);
   }, []);
 
+
   return (
     <section className="content">
+     
       <div className="container-fluid">
         {loading ? (
           <Spinner />
@@ -30,6 +33,8 @@ const HomeContainer = () => {
           <h5>No users found</h5>
         )}
       </div>
+
+      
     </section>
   );
 };

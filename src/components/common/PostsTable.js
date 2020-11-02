@@ -18,7 +18,7 @@ const PostsTable = ({posts: oldPosts, showActions}) => {
     Swal.fire('Post deleted successfully');
   };
 
-  const editPost = async post => {
+  const editPost =  post => {
     setPostForm(post);
   };
 
@@ -71,9 +71,7 @@ const PostsTable = ({posts: oldPosts, showActions}) => {
                             <tr key={post.id}>
                               <td>{post.id}</td>
                               <td>{post.title}</td>
-                              <td
-                                style={{display: 'flex', alignItems: 'center'}}
-                              >
+                              <td>
                                 <Link
                                   className="btn btn-primary btn-sm"
                                   to={`/posts/${post.id}`}
@@ -96,6 +94,7 @@ const PostsTable = ({posts: oldPosts, showActions}) => {
                                     >
                                       <i className="fas fa-trash" />
                                     </button>
+                                   
                                   </>
                                 )}
                               </td>

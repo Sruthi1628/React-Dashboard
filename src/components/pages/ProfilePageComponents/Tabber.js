@@ -47,7 +47,12 @@ const Tabber = ({posts, todos, comments}) => {
             </div>
             {/* /.tab-pane */}
             <div className="tab-pane" id="settings">
-              <CommentsTable comments={comments} />
+              {comments.length > 0 ? (
+               <CommentsTable comments={comments} />
+              ) : (
+                <h5>No comments found...</h5>
+              )}
+              
             </div>
             {/* /.tab-pane */}
           </div>
